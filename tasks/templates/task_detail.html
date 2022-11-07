@@ -1,11 +1,7 @@
-{% extends 'base.html' %} 
-{% block content %} 
-
-{{task.title}} 
-{{error}}
+{% extends 'base.html' %} {% block content %}
 
 <form method="POST" class="card card-body tex-center">
-  {% csrf_token %} {{form.as_p}}
+  {{task.title}} {{error}} {% csrf_token %} {{form.as_p}}
 
   <button>Update</button>
 </form>
